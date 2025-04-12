@@ -11,7 +11,7 @@ const Header = () => {
   const logoutHandler = async () => {
     setLoading(true);
     try {
-      await axios.get(`${server}/users/logout`, {
+      await axios.get(`http://localhost:2000/users/logout`, {
         withCredentials: true,
       });
 
@@ -32,7 +32,6 @@ const Header = () => {
       </div>
       <article>
         <Link to={"/"}>Home</Link>
-        <Link to={"/profile"}>Profile</Link>
         {isAuthenticated ? (
           <button disabled={loading} onClick={logoutHandler} className="btn">
             Logout

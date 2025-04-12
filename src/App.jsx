@@ -8,8 +8,6 @@ import { useContext, useEffect } from "react";
 import axios from "axios";
 import { Context, server } from "./main";
 
-const server = 'https://todo-backend-1-rqw6.onrender.com';
-
 function App() {
   const { setUser, setIsAuthenticated, setLoading } = useContext(Context);
 

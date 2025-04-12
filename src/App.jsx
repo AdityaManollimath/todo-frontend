@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:2000/users/me`, {
+      .get(`http://localhost:2000/users/userid`, {
         withCredentials: true,
       })
       .then((res) => {

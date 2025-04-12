@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/app.scss";
 import { createContext } from "react";
+import axios from "axios";
 
 export const server = "https://todo-backend-1-rqw6.onrender.com";
 
 export const Context = createContext({ isAuthenticated: false });
-
+axios.defaults.withCredentials = true;
 const AppWrapper = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(false);

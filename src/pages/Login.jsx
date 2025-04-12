@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:2000/users/login`,
+        `${server}/users/login`,
         {
           email,
           password,
